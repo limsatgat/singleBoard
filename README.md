@@ -6,6 +6,7 @@
   <li> JPA & MyBatis </li>
   <li> Thymeleaf </li>
   <li> Gradle-kotlin </li>
+  <li> MySQL </li>
 </ul>
 
 <h2> JPA </h2>
@@ -17,6 +18,7 @@
   </ul>
 
 <h2> Mybatis </h2>
+<img src="https://user-images.githubusercontent.com/96382179/221769559-6ae21d2b-42ba-48a9-a283-3d9990b6f66a.png"/>
 <ul>
   <li>자바 오브젝트와 SQL문 사이의 자동 Mapping 기능을 지원하는 ORM 프레임워크</li>
   <li>SQL을 별도의 파일로 분리해서 관리하며 객체-SQL 사이의 파라미터 Mappng 작업을 자동으로 해줌</li>
@@ -30,8 +32,12 @@
 </ul>
 
 <h2> Gradle - kotlin </h2>
+<img src="https://user-images.githubusercontent.com/96382179/221769624-bdef03ce-59de-4622-84b7-7d5a77360fd3.png"/>
 <ul>
   <li>오픈소스 빌드도구</li>
   <li>모든 문자열을 큰따옴표(")로 작성하는 규칙이 있음</li>
   <li>코드 자동완성, 오류코드 강조, 빠른 문서보기 가능과 리팩터링의 장점</li>
-<ul>  
+<ul>
+
+<h2> mySQL </h2>
+<img src="https://user-images.githubusercontent.com/96382179/221769782-9d49cf69-33b9-4a5f-b67e-b634ad113ecb.png">
