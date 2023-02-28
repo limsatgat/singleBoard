@@ -29,6 +29,51 @@
 <img src="https://user-images.githubusercontent.com/96382179/221768510-b0c5da66-7f0f-4b0b-a444-ff64e08bb7e1.png">
 <ul>
   <li>html태그를 기반으로하여 th:속성을 이용하여 동적인 View를 제공</li>
+  <li>
+    <table>
+      <th>표현</th>
+      <th>설명</th>
+      <th>예제</th>
+      <tr>
+        <td>@{ ... }</td>
+        <td>@{ URL 링크 표현식 }</td>
+        <td>th:href="@{/css/boostrap.min.css}"<br>th:href="@{/{itemId}/edit(itemId=${item.id})}"</td>
+      </tr>
+      <tr>
+        <td>| ... |</td>
+        <td>리터럴 대체</td>
+        <td>th:text="|Hi ${user.name}!|"<br>(= th:text="'Hi '+${user.name}+'!'"</td>
+      </tr>
+      <tr>
+        <td>${ ... }</td>
+        <td>변수</td>
+        <td>th:text=${user.name}</td>
+      </tr>
+      <tr>
+        <td>th:each</td>
+        <td>반복 출력</td>
+        <td>
+          <div th:each="item: ${items}">
+            <span th:text="${item.price}">100</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>*{ ... }</td>
+        <td>선택 변수</td>
+        <td>	
+            <div th:object="${items}">
+              <span th:text="*{price}">100</span>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>#{ ... }</td>
+        <td>메시지. properties 같은 외부 자원에서 코드에 해당하는 문자열 get.</td>
+        <td>th:text="#{member.register}"</td>
+      </tr>
+    </table>
+  </li>
 </ul>
 
 <h2> Gradle - kotlin </h2>
