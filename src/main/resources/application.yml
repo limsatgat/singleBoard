@@ -10,15 +10,16 @@ spring:
     prefix: classpath:templates/
     suffix: .html
 
-  # Auto Update
-  # JPA 미 사용 시 주석처리
   jpa:
     hibernate:
       ddl-auto: update
 
-# mybatis 미 사용 시 주석처리
-#mybatis:
-#  mapper-locations:mapper/*.xml
+  mybatis:
+    configuration:
+      map-underscore-to-camel-case: true
+  config-location: classpath:mybatis-config.xml
+
+
 
 server:
   port: 65535

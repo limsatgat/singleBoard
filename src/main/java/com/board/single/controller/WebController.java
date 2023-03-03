@@ -13,4 +13,10 @@ public class WebController{
     public String index(){
         return "index";
     }
+
+    // 게시판
+    @GetMapping("/board")
+    public String board(){
+        return "/view/board";
+    }
 }
