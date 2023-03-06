@@ -19,10 +19,4 @@ public class WebController{
     public String board(){
         return "/view/board";
     }
-
-    // 테스트
-    @GetMapping("/test")
-    public String test(){
-        return "/view/test";
-    }
 }
