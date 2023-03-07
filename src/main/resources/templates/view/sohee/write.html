@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}">
+
+<th:block layout:fragment="content">
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <div id="content">
+
+            <div class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"></div>
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800">등록하기</h1>
+                <p class="mb-4">등록할 도서를 입력해주세요</p>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
+                    </div>
+                    <form role="form" action="" th:object="${book}" method="post" class="card-body">
+                        <div class="form-group">
+                            <label th:for="name">제목</label>
+                            <input type="text" th:field="*{name}" class="form-control" placeholder="제목을 입력하세요"
+                                   th:class="${#fields.hasErrors('name')}? 'form-controlfieldError' : 'form-control'">
+                            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Incorrect date</p>
+                        </div>
+                        <div class="form-group">
+                            <label th:for="name">저자</label>
+                            <input type="text" th:field="*{writer}" class="form-control" placeholder="제목을 입력하세요"
+                                   th:class="${#fields.hasErrors('writer')}? 'form-controlfieldError' : 'form-control'">
+                            <p th:if="${#fields.hasErrors('writer')}" th:errors="*{writer}">Incorrect date</p>
+                        </div>
+                        <div class="form-group">
+                            <label th:for="content">내용</label>
+                            <input type="text" th:field="*{content}" class="form-control" placeholder="내용을 입력하세요">
+                        </div>
+                        <button type="button" class="btn btn-primary" onClick="save()">저장하기</button>
+                        <button type="button" class="btn btn-secondary" onclick="goList()">목록으로</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function save() {
+            alert("등록 개발");
+
+        }
+        function goList() {
+            location.href = 'list';
+        }
+    </script>
+</th:block>
+</html>
