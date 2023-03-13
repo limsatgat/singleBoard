@@ -14,8 +14,6 @@ public class BookService {
     private final BookRepository bookRepository;
 
     public Long save(Book book) {
-        // TODO validation check 추가
-
         bookRepository.save(book);
         return book.getId();
     }
