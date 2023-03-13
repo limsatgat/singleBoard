@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
@@ -21,4 +22,6 @@ public class Book {
     private String writer;
     private String content;
 
+    private LocalDateTime createDatetime;
+    private LocalDateTime updateDatetime;
 }
